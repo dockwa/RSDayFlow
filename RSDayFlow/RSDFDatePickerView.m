@@ -672,7 +672,6 @@ static NSString * const RSDFDatePickerViewDayCellIdentifier = @"RSDFDatePickerVi
     if ([self.dataSource respondsToSelector:@selector(datePickerView:shouldMarkDate:)]) {
         cell.marked = [self.dataSource datePickerView:self shouldMarkDate:cellDate];
         
-//<<<<<<< HEAD
         if (cell.marked) {
             if ([self.dataSource respondsToSelector:@selector(datePickerView:markImageForDate:)]) {
                 cell.markImage = [self.dataSource datePickerView:self markImageForDate:cellDate];
@@ -680,7 +679,6 @@ static NSString * const RSDFDatePickerViewDayCellIdentifier = @"RSDFDatePickerVi
                 cell.markImageColor = [self.dataSource datePickerView:self markImageColorForDate:cellDate];
             }
         }
-//=======
         NSComparisonResult result = [_today compare:cellDate];
         switch (result) {
             case NSOrderedSame: {
@@ -705,7 +703,6 @@ static NSString * const RSDFDatePickerViewDayCellIdentifier = @"RSDFDatePickerVi
             cell.outOfRange = YES;
         } else {
             cell.outOfRange = NO;
-//>>>>>>> ruslanskorb/master
         }
 
         cell.accessibilityLabel = [NSDateFormatter localizedStringFromDate:cellDate dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterNoStyle];
