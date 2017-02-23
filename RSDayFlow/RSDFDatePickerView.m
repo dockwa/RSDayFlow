@@ -719,7 +719,6 @@ static NSString * const RSDFDatePickerViewDayCellIdentifier = @"RSDFDatePickerVi
         cell.accessibilityLabel = [NSDateFormatter localizedStringFromDate:cellDate dateStyle:NSDateFormatterLongStyle timeStyle:NSDateFormatterNoStyle];
     }
     
-        
     cell.backgroundColor = cell.selfBackgroundColor;
     
     [cell setNeedsDisplay];

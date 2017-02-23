@@ -221,6 +221,7 @@ CGFloat roundOnBase(CGFloat x, CGFloat base) {
     if (self.isNotThisMonth) {
         self.dateLabel.textColor = [self notThisMonthLabelTextColor];
         self.dateLabel.font = [self dayLabelFont];
+        self.backgroundColor = [self selfBackgroundColor];
     } else {
         if (self.isOutOfRange) {
             self.dateLabel.textColor = [self outOfRangeDayLabelTextColor];
